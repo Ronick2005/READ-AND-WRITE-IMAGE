@@ -23,59 +23,58 @@ End the program and close the output image windows.
 ### Register Number: 
 i) #To Read,display the image
 ```
-  
-
+import cv2
+img = cv2.imread('ai_dog.jpg', 1)
+cv2.imshow('212222240084_Ronick', img)
+cv2.waitKey(0)
 ```
 ii) #To write the image
 ```
-
-
-
+import cv2
+img = cv2.imread('ai_dog.jpg', 1)
+new_img = cv2.imwrite('ai_dog_copy.jpg', img)
+cv2.imshow('212222240084_Ronick', img)
+cv2.waitKey(0)
 ```
 iii) #Find the shape of the Image
-```python3
-
-
-
+```
+import cv2
+img = cv2.imread('ai_dog.jpg', 1)
+print(img.shape)
 ```
 iv) #To access rows and columns
-
-```python3
-
-
-
+```
+import cv2
+import random
+img = cv2.imread('ai_dog.jpg', 1)
+for i in range(100):
+    for j in range(img.shape[1]):
+        img[i][j] = [random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)]
+cv2.imshow('part image', img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 ```
 v) #To cut and paste portion of image
-```python3
-
-
-
+```
+import cv2
+img = cv2.imread('ai_dog.jpg', 1)
+tag = img[300:400, 300:400]
+img[50:150, 50:150] = tag
+cv2.imshow('212222240084_Ronick', img)
+cv2.waitKey(0)
 ```
 
 ## Output:
 
 ### i) Read and display the image
-
-<br>
-<br>
-
+![](ep1_op1.png)
 ### ii)Write the image
-
-<br>
-<br>
-
+![](ep1_op2.png)
 ### iii)Shape of the Image
-
-<br>
-<br>
-
+![](ep1_op3.png)
 ### iv)Access rows and columns
-<br>
-<br>
-
+![](ep1_op4.png)
 ### v)Cut and paste portion of image
-<br>
-<br>
-
+![](ep1_op5.png)
 ## Result:
 Thus the images are read, displayed, and written successfully using the python program.
